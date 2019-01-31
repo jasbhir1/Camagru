@@ -144,20 +144,21 @@ input[type=text], input[type=password] {
     background: #333;
     color: #fff;
     border: #666 1px solid;
+    width: 500px;
   }
 
   .btn-light {
     background: #f4f4f4;
     color: #333;
     border: #ccc 1px solid;
+    width: 500px;
   }
 
   .select {
     height: 40px;
     background: #333;
     color: #fff;
-    padding: 3px;
-    width: 100%;
+    width: 500px;
     border: 1px #666 solid;
     margin-bottom: 10px;
   }
@@ -253,4 +254,10 @@ input[type=text], input[type=password] {
   .active,
   .demo:hover {
     opacity: 1;
+  }
+
+  #photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
   }

@@ -4,6 +4,8 @@ let width = 500,
     filter = 'none',
     streaming = false;
 
+var savePhoto = document.getElementById('dl-btn');
+
 // DOM Elements
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
@@ -80,7 +82,9 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
       context.drawImage(video, 0, 0, width, height);
 
       // Create image from the canvas
-      const imgUrl = canvas.toDataURL('image/png');
+      var imgDataUrl = canvas.toDataURL('image/png');
+     
+      document.querySelector('#dl-btn').href = imgDataUrl;
 
       // Create img element
       const img = document.createElement('img');
