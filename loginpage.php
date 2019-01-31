@@ -33,7 +33,11 @@ try{
             
             if($count == 1)
             {
-                $_SESSION["username"] = $_POST["username"];
+                $results = $statement->fetchAll(PDO::FETCH_ASSOC)[0];
+                
+                $_SESSION["username"] = $results["username"];
+                $_SESSION["id"]       = $results["id"];
+                
                 header("location:index.php");
             }
             else

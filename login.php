@@ -20,6 +20,7 @@
     <div class="box23">
         <div class="box2">
             <h2>LOGIN</h2>
+            <a href="forgot_password.php"><input class="submit" type="submit" value="forgot password?" name="forgot"></a>
             <h3>Username:</h3>
         <form class="form-inline" method="post" action="loginpage.php">
             <input class="input" placeholder="Enter username" type="text" name="username" required><br>
