@@ -20,12 +20,12 @@
           reg_date TIMESTAMP NOT NULL,
           isVerified INT(1) DEFAULT 0)"
   );
-  /*$conn->exec("CREATE TABLE images (
-          id INT PRIMARY KEY AUTO_INCREMENT,
-          photo LONGTEXT NOT NULL,
-          pname VARCHAR(255) NOT NULL,
+  $conn->exec("CREATE TABLE images (
+          id INT(255) PRIMARY KEY AUTO_INCREMENT,
+          username VARCHAR(255) NOT NULL,
+          picProfile VARCHAR(255) NOT NULL,
           likes INT DEFAULT 0)"
-  );*/
+  );
 
   header('Location: login.php');
 ?>

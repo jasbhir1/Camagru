@@ -54,7 +54,7 @@ if(isset($_POST['update']))
         <p>1) Please enter your email address below</p> <br>
         <p>2) A temporary password will be sent to your email</p><br>
         <p>3) Login with your temporary password</p><br>
-        <p>4) Once logged in then set your own password using update details</p><br>
+        <p>4) Once logged in then set your own password using updated details</p><br>
         <input class="input" placeholder="Enter email address" type="email" name="email" required>
         <input type="submit" name="update" required placeholder="Send email">
         </form>
