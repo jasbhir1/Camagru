@@ -1,7 +1,7 @@
 # Camagru
-Re-making instagram
-*create database 
-*create account
+Re-making instagram <br>
+*create database <br>
+*create account <br>
 *receive email verification link
 *login system
 *camera in javascript
