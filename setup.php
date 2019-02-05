@@ -24,6 +24,7 @@
           id INT(255) PRIMARY KEY AUTO_INCREMENT,
           username VARCHAR(255) NOT NULL,
           picProfile VARCHAR(255) NOT NULL,
+          image_text TEXT(400) NOT NULL,
           likes INT DEFAULT 0)"
   );
 

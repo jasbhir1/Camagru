@@ -27,7 +27,8 @@ if(isset($_SESSION["username"]))
 {
     echo '<h3>Login Success, Welcome - '.$_SESSION["username"].'</h3>';
     echo '<br /><br /><a href="update_info.php">Update user info</a>';
-    echo '<br /><br /><a href="edit_form.php">Upload a picture from pc</a>';
+    echo '<br /><br /><a href="photo_index.php">Upload a picture from pc</a>';
+    echo '<br /><br /><a href="gallery.php">View Gallery</a>';
     echo '<br /><br /><a href="logout.php">logout now</a>';
 }
 else
@@ -57,7 +58,11 @@ else
             <button id="clear-button" class="btn btn-light">Clear</button>
             <canvas id="canvas"></canvas>
            
-           <a id="dl-btn" href="imageDataUrl" download="glorious_selfie.png">Save Photo</a>
+           <a id="dl-btn" href="imageDataUrl" download="camagru_selfie.png">Save Photo</a>
+           <?php
+        //    $data = base64_encode("canvas");
+        //    echo $data;
+           ?>
         </article>
         <script src="camera.js"></script>
         <div class="bottom-container">

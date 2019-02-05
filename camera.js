@@ -56,7 +56,7 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
     video.style.filter = filter;
 
     e.preventDefault(); 
-  });
+  }, false);
 
   // Clear event
   clearButton.addEventListener('click', function(e) {
@@ -68,7 +68,7 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
     video.style.filter = filter;
     // Reset select list
     photoFilter.selectedIndex = 0;
-  });
+  }, false);
 
   // Take picture from canvas
   function takePicture() {
