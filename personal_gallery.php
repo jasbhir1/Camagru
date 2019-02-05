@@ -17,7 +17,8 @@ try{
       $message = $error->getMessage();
   }
 
-    $display = "SELECT * FROM images WHERE 1";
+  $username = $_SESSION['username'];
+    $display = "SELECT * FROM `images` WHERE username = '".$username."'";
     $do = $connect->query($display);
 
     $id = $_GET['id'];
@@ -25,9 +26,8 @@ try{
 
     while($pics = $do->fetch())
     {
-
-      echo "<img src=\"uploads/".$pics['picProfile']."\">";
-      echo $pics['username']."  said  ";
+        echo "<img src=\"uploads/".$pics['picProfile']."\">";
+        echo $pics['username']."  said  ";
       echo $pics['image_text'];
 
       
@@ -39,4 +39,3 @@ try{
   
 
 ?>
- 
