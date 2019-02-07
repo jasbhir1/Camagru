@@ -6,6 +6,9 @@ let width = 500,
 
 var savePhoto = document.getElementById('dl-btn');
 
+//sticker
+var stick = document.getElementById('stick');
+
 // DOM Elements
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
@@ -74,12 +77,14 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
   function takePicture() {
     // Create canvas
     const context = canvas.getContext('2d');
+    
     if(width && height) {
       // set canvas props
       canvas.width = width;
       canvas.height = height;
       // Draw an image of the video on the canvas
       context.drawImage(video, 0, 0, width, height);
+      context.drawImage(stick, 0, 0, width, height);
 
       // Create image from the canvas
       var imgDataUrl = canvas.toDataURL('image/png');
@@ -90,12 +95,24 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
       const img = document.createElement('img');
 
       // Set img src
-      img.setAttribute('src', imgUrl);
+      img.setAttribute('src', imgDataUrl);
 
       // Set image filter
       img.style.filter = filter;
 
       // Add image to photos
-      photos.appendChild(img);
     }
   }
+
+  //superimpose
+
+  //select sticker
+  var stickers = document.getElementsByClassName('sticker');
+  
+  stickers = Array.from(stickers);
+
+stickers.forEach( function(sticker, i ){
+    sticker.addEventListener( 'click', function(){
+      stick.src = sticker.src;
+    });
+});

@@ -28,16 +28,17 @@
         
         $imageSize = $_FILES['profile']['size'];
        
- 
         $upload_dir = 'uploads/'; //img file directory
         $imgExt = strtolower(pathinfo($images,PATHINFO_EXTENSION));
         $valid_extensions = array("jpeg", "jpg", "png", "gif", "pdf"); //list of valid image types that can be uploaded
         $picProfile = rand(1000, 1000000).".".$imgExt; //creates random name for image
         
         move_uploaded_file($tmp_dir, $upload_dir.$picProfile); //moves file from current directory to upload directory
+        $file = file_get_contents($upload_dir.$picProfile,true );
+        $enc = base64_encode($file);
         $stmt = $connect->prepare('INSERT INTO images(username, picProfile, image_text) VALUES (:uname, :upic, :utxt)');
         $stmt->bindParam(':uname', $name);
-        $stmt->bindParam(':upic', $picProfile);
+        $stmt->bindParam(':upic', $enc);
         $stmt->bindParam(':utxt', $image_text);
         if($stmt->execute())
         {
@@ -103,17 +104,6 @@
  
 <body>
 <div id="content">
-  <?php
-//   $count = 0;
-//     while ($row = $results->fetch(PDO::FETCH_BOTH)) {
-//         $count++;
-//       echo "<div id='img_div'>";
-//       	echo "<img src='images/".$row['image']."' >";
-//       	echo "<p>".$row['image_text']."</p>";
-//       echo "</div>";
-//     echo $results;
-    // }
-  ?>
   <form method="POST" action="photo_index.php" enctype="multipart/form-data">
   	<input type="hidden" name="size" value="1000000">
   	<div>

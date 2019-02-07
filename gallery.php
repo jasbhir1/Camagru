@@ -26,7 +26,10 @@ try{
     while($pics = $do->fetch())
     {
 
-      echo "<img src=\"uploads/".$pics['picProfile']."\">";
+    //   echo "<img src=\"uploads/".$pics['picProfile']."\">";
+    $pic = $pics['picProfile'];
+    // echo $pic;
+      echo "<img src='data:image/png;base64,$pic'>";
       echo $pics['username']."  said  ";
       echo $pics['image_text'];
 

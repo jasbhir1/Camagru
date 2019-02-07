@@ -17,6 +17,7 @@
 
     <section>
         <nav>
+
         <?php
 
 //home page
@@ -55,14 +56,31 @@ else
                 <option value="blur(10px)">Blur</option>
                 <option value="contrast(200%)">Contrast</option>
             </select>
+            <!-- The social media icon bar -->
+            <div class="icon-bar">     
+                <img class='sticker' src="https://clipart.info/images/ccovers/1496184260OMG-Emoji-Png-transparent-background.png" style="width:42px;height:42px;border:0;"> 
+                <img class='sticker' src="https://images.vexels.com/media/users/3/134594/isolated/preview/cb4dd9ad3fa5ad833e9b38cb75baa18a-happy-emoji-emoticon-by-vexels.png" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="https://cdn.shopify.com/s/files/1/1061/1924/files/Sunglasses_Emoji.png?2976903553660223024" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="https://i.pinimg.com/originals/03/7e/79/037e79b2fb52127537be79110891ae3f.png" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="https://data.whicdn.com/images/235390705/superthumb.jpg?t=1460855684" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="http://www.stickpng.com/assets/images/5897a709cba9841eabab614e.png" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="https://clipart.info/images/ccovers/1496184257Hugging-Emoji-png-transparent-Icon.png" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpmCgmCGmVMimKAyaFAUf0JKbEv3GgDM9mhjyV063Jv0cl93e2" style="width:42px;height:42px;border:0;">
+                <img class='sticker' src="https://clipart.info/images/ccovers/1496184258Devil-Emoji-png-transparent-Icon.png" style="width:42px;height:42px;border:0;">
+                <img class='sticker' style="width:42px;height:42px;">
+
+                </div>
 
             <button id="clear-button" class="btn btn-light">Clear</button>
-            <canvas id="canvas"></canvas>
+            <div class="canvas-element">
+                <canvas id="canvas"></canvas>
+                <img id='stick' style="width:42px;height:42px;">
+
+            </div>
            
            <a id="dl-btn" href="imageDataUrl" download="camagru_selfie.png">Save Photo</a>
            <?php
-        //    $data = base64_encode("canvas");
-        //    echo $data;
+        print_r();
            ?>
         </article>
         <script src="camera.js"></script>
@@ -77,3 +95,5 @@ else
 </body>
 
 </html>
+
+
