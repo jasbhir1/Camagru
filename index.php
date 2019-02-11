@@ -31,6 +31,7 @@ if(isset($_SESSION["username"]))
     echo '<br /><br /><a href="personal_gallery.php">View Personal Gallery</a>';
     echo '<br /><br /><a href="photo_index.php">Upload a picture from pc</a>';
     echo '<br /><br /><a href="gallery.php">View Camagru Gallery</a>';
+    echo '<br /><br /><a href="delete_image.php">Delete a picture?</a>';
     echo '<br /><br /><a href="logout.php">logout now</a>';
 }
 else

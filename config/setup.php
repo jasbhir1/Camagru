@@ -28,6 +28,6 @@
           likes INT DEFAULT 0)"
   );
 
-  header('Location: login.php');
+  header('Location: ../login.php');
 ?>
 

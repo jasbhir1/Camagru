@@ -19,6 +19,8 @@
     {
        
         $name = $_POST['username'];
+        if ($name == $_SESSION['username'])
+        {
         
         $images = $_FILES['profile']['name']; //gets image name
         
@@ -46,7 +48,7 @@
             ?>
             <script>
                 alert("new record successul");
-                window.location.href=('gallery.php');
+                window.location.href=('personal_gallery.php');
             </script>
         <?php
         }
@@ -54,6 +56,15 @@
             ?>
             <script>
                 alert("Error");
+                window.location.href=('photo_index.php');
+            </script>
+        <?php
+        }
+    }
+        else{
+            ?>
+            <script>
+                alert("enter correct username");
                 window.location.href=('photo_index.php');
             </script>
         <?php
@@ -123,6 +134,9 @@
   	</div>
   </form>
 </div>
+<?php     echo '<br /><br /><a href="index.php">Home <- or </a>';
+    echo '<a href="logout.php">-> logout now</a>';
+    ?>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </body>

@@ -21,7 +21,9 @@ try{
     $do = $connect->query($display);
 
     $id = $_GET['id'];
-   
+    echo '<br /><br /><a href="index.php">Home <- or</a>';
+    echo '<a href="logout.php">-> logout now</a>';
+    echo '<br /><br />';
 
     while($pics = $do->fetch())
     {

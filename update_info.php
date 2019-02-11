@@ -59,5 +59,8 @@ if(isset($_POST['update']))
             <input type="password" name="password" required placeholder="password"><br><br>
             <input type="submit" name="update" required placeholder="Update Data">
         </form>
+        <?php     echo '<br /><br /><a href="index.php">Home <- or </a>';
+    echo '<a href="logout.php">-> logout now</a>';
+    ?>
     </body>
 </html>
